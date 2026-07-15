@@ -33,7 +33,7 @@
       "transition-left-to-right": false
     },
     "modules": [
-      "pulseaudio",
+      "custom/audio-status",
       "pulseaudio/slider",
       "pulseaudio#microphone"
     ]

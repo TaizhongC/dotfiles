@@ -3,7 +3,8 @@
   margin: 0 0 6px 0;
   padding: 8px 12px;
   background: var(--bg-widget);
-  border-bottom: 1px solid var(--border-subtle);
+  border: none;
+  border-radius: var(--radius-widget);
 }
 
 .widget-title>label {
@@ -17,9 +18,9 @@
   font-weight: 600;
   color: var(--btn-off);
   background: var(--bg-tile);
-  border: 1px solid var(--border-glass);
+  border: none;
   border-radius: var(--radius-btn);
-  transition: background var(--t-fast), border-color var(--t-fast);
+  transition: background var(--t-fast);
 }
 
 .widget-title>button:hover {
@@ -43,10 +44,10 @@
 .widget-dnd>switch {
   min-width: 42px;
   min-height: 22px;
-  background: var(--bg-tile);
-  border: 1px solid var(--border-glass);
+  background: var(--bg-tile-hover);
+  border: none;
   border-radius: 20px;
-  transition: background var(--t-mid), border-color var(--t-mid);
+  transition: background var(--t-mid);
 }
 
 .widget-dnd>switch:checked {
@@ -57,7 +58,11 @@
   min-width: 14px;
   min-height: 14px;
   margin: 4px 4px;
-  background: var(--btn-off);
+  background: var(--text-dim);
   border-radius: 50%;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.widget-dnd>switch:checked slider {
+  background: #b8eaff;
 }

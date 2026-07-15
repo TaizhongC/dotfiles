@@ -8,7 +8,17 @@
 * {
   outline-width: 0px;
   outline-style: none;
-  font-size: 16px;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 14px;
+}
+
+.control-center,
+.control-center *,
+.notification,
+.notification *,
+.notification-popup,
+.notification-popup * {
+  font-family: "JetBrainsMono Nerd Font";
 }
 
 .background,
@@ -22,16 +32,14 @@ button {
 }
 
 button:focus {
-  outline-width: 2px;
-  outline-style: solid;
-  outline-offset: 2px;
+  outline: none;
 }
 
 /* --- MAIN CONTAINER --- */
 .control-center {
-  padding: 20px 14px;
+  padding: 12px;
   background: var(--bg-panel);
-  border: 2px solid var(--border-glass);
+  border: none;
   border-radius: var(--radius-panel);
 }
 
@@ -53,9 +61,26 @@ button:focus {
 /* --- NOTIFICATION GROUP --- */
 .notification-group.collapsed {
   background: var(--bg-widget);
+  border: none;
   border-radius: var(--radius-widget);
 }
 
 .notification-row {
   padding: 6px 1px;
+}
+
+.widget-notifications {
+  margin: 4px 0;
+  padding: 0;
+  background: transparent;
+}
+
+.widget-notifications scrollbar,
+.widget-notifications scrollbar * {
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  opacity: 0;
 }

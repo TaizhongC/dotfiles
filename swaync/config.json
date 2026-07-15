@@ -1,4 +1,6 @@
 {
+  "ignore-gtk-theme": true,
+  "cssPriority": "user",
   "layer": "overlay",
   "control-center-layer": "top",
   "keyboard-shortcuts": true,
@@ -15,9 +17,9 @@
   "control-center-margin-bottom": 8,
   "control-center-margin-right": 8,
   "control-center-margin-left": 0,
-  "notification-window-width": 380,
-  "notification-icon": true,
-  "notification-icon-size": 48,
+  "notification-window-width": 360,
+  "notification-icon": false,
+  "notification-icon-size": 32,
   "app-icon-size": 20,
   "notification-close-button-position": "right",
   "notification-visibility": {},
@@ -25,21 +27,46 @@
   "timeout-low": 5,
   "timeout-critical": 0,
   "widgets": [
-    "title",
+    "buttons-grid",
     "dnd",
-    "volume",
     "backlight",
+    "volume",
     "mpris",
     "notifications"
   ],
   "widget-config": {
-    "title": {
-      "text": "Notification Center",
-      "clear-all-button": true,
-      "button-text": "Clear All"
-    },
     "dnd": {
       "text": "Do Not Disturb"
+    },
+    "buttons-grid": {
+      "buttons-per-row": 4,
+      "actions": [
+        {
+          "label": "󰤨",
+          "type": "toggle",
+          "active": true,
+          "command": "sh -c 'if [ \"$SWAYNC_TOGGLE_STATE\" = true ]; then nmcli radio wifi on; else nmcli radio wifi off; fi'",
+          "update-command": "sh -c 'if [ \"$(nmcli radio wifi)\" = enabled ]; then echo true; else echo false; fi'"
+        },
+        {
+          "label": "󰂯",
+          "type": "toggle",
+          "active": true,
+          "command": "sh -c 'if [ \"$SWAYNC_TOGGLE_STATE\" = true ]; then bluetoothctl power on; else bluetoothctl power off; fi'",
+          "update-command": "sh -c 'if LC_ALL=C bluetoothctl show | grep -q \"Powered: yes\"; then echo true; else echo false; fi'"
+        },
+        {
+          "label": "",
+          "type": "toggle",
+          "active": false,
+          "command": "sh -c 'if [ \"$SWAYNC_TOGGLE_STATE\" = true ]; then wpctl set-mute @DEFAULT_AUDIO_SOURCE@ 0; else wpctl set-mute @DEFAULT_AUDIO_SOURCE@ 1; fi'",
+          "update-command": "sh -c 'if wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | grep -q MUTED; then echo false; else echo true; fi'"
+        },
+        {
+          "label": "󰸉",
+          "command": "/home/tc/.local/bin/wallpaperctl pick"
+        }
+      ]
     },
     "mpris": {
       "image-size": 56,

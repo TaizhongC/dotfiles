@@ -16,7 +16,6 @@
     "./modules/connections.jsonc",
     "./modules/battery.jsonc",
     "./modules/clock.jsonc",
-    "./modules/wallpaper.jsonc",
     "./modules/tray-notif.jsonc"
   ],
   "modules-left": [
@@ -25,8 +24,7 @@
     "group/system"
   ],
   "modules-center": [
-    "hyprland/workspaces",
-    "custom/wallpaper"
+    "hyprland/workspaces"
   ],
   "modules-right": [
     "group/audio",

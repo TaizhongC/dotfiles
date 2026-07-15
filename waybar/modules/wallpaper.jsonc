@@ -3,8 +3,7 @@
     "format": "󰸉",
     "exec": "echo '󰸉'",
     "tooltip": false,
-    "on-click": "/home/tc/.local/bin/wallpaperctl pick",
-    "on-click-right": "/home/tc/.local/bin/wallpaperctl set",
+    "on-click": "swaync-client -t -sw",
     "escape": true
   }
 }

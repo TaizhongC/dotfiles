@@ -2,7 +2,7 @@
   "clock": {
     "timezone": "Europe/London",
     "format": "<span size='11pt'>{:%H:%M}</span>",
-    "format-alt": "󰃱 <span size='11pt'>{:%H.%M  %A %d %B}</span>",
+    "format-alt": "󰃱 <span size='11pt'>{:%H:%M  %A %d %B}</span>",
     "tooltip-format": "{calendar}",
     "calendar": {
       "format": {

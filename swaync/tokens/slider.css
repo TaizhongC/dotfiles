@@ -1,49 +1,51 @@
 .widget-volume,
 .widget-backlight {
   margin: 3px 0 3px 0;
-  padding: 10px 14px 10px 14px;
+  padding: 8px 10px;
   background: var(--bg-widget);
-  border: 1px solid var(--border-subtle);
+  border: none;
   border-radius: var(--radius-widget);
 }
 
 .widget-volume label,
 .widget-backlight label {
-  color: rgba(0, 0, 0, 0.85);
+  color: var(--accent);
+  font-size: 16px;
+  margin-right: 4px;
 }
 
 .widget-volume scale,
 .widget-backlight scale {
-  padding: 0 4px 0 4px;
-  color: #ffffff;
+  padding: 0;
+  color: var(--text-primary);
 }
 
 .widget-volume scale trough,
 .widget-backlight scale trough {
-  min-height: 8px;
-  background: var(--text-dim);
+  min-height: 10px;
+  background: var(--bg-tile-hover);
   border: none;
-  border-radius: 6px;
+  border-radius: 999px;
 }
 
 .widget-volume scale trough highlight,
 .widget-backlight scale trough highlight {
-  background: #ffffff;
-  border-radius: 6px;
+  background: var(--accent);
+  border-radius: 999px;
 }
 
 .widget-volume scale slider,
 .widget-backlight scale slider {
-  min-width: 15px;
-  min-height: 15px;
-  background: var(--text-primary);
-  border: 2px solid var(--text-dim);
-  border-radius: 50%;
-  box-shadow: 0 0 8px var(--accent-dim);
-  transition: box-shadow var(--t-fast);
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .widget-volume scale slider:hover,
 .widget-backlight scale slider:hover {
-  box-shadow: 0 0 14px var(--accent-hover);
+  background: transparent;
 }

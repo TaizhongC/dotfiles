@@ -1,0 +1,20 @@
+#!/bin/sh
+
+state=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ 2>/dev/null) || exit 1
+volume=$(printf '%s\n' "$state" | awk '{print $2}')
+
+if printf '%s\n' "$state" | grep -q '\[MUTED\]' || awk "BEGIN { exit !($volume <= 0.005) }"; then
+  icon='󰝟'
+  class='muted'
+elif awk "BEGIN { exit !($volume < 0.34) }"; then
+  icon='󰕿'
+  class='low'
+elif awk "BEGIN { exit !($volume < 0.67) }"; then
+  icon='󰖀'
+  class='medium'
+else
+  icon='󰕾'
+  class='high'
+fi
+
+printf '{"text":"%s","class":"%s"}\n' "$icon" "$class"

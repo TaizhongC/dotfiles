@@ -2,34 +2,57 @@
   margin: 4px 0;
   padding: 8px;
   background: var(--bg-widget);
+  border: none;
+  border-radius: var(--radius-widget);
 }
 
 .widget-buttons-grid>flowbox>flowboxchild {
-  margin: 0 16px;
+  margin: 0 3px;
   padding: 0;
   border: none;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button {
-  min-width: 40px;
-  min-height: 40px;
-  padding: 5px;
-  color: var(--text-primary);
-  background: transparent;
-  transition: all var(--t-fast);
+  min-width: 64px;
+  min-height: 42px;
+  padding: 5px 8px;
+  color: var(--text-secondary);
+  background: var(--bg-tile);
+  border: none;
+  border-radius: var(--radius-btn);
+  transition: background var(--t-fast), color var(--t-fast);
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
-  color: var(--text-hover);
-  background-color: var(--hover-dim);
+  color: var(--accent);
+  background-color: var(--bg-tile-hover);
+}
+
+.widget-buttons-grid button.toggle:checked,
+.widget-buttons-grid flowboxchild:checked button {
+  color: #b8eaff;
+  background-color: var(--accent-dim);
+}
+
+.toggle:checked {
+  color: #b8eaff;
+  background-color: var(--accent-dim);
+}
+
+.toggle:checked label {
+  color: #b8eaff;
+}
+
+.widget-buttons-grid button.toggle:not(:checked) {
+  color: var(--text-dim);
+  background-color: var(--bg-tile);
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button>label {
-  margin-right: 3px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .notification image {
-  filter: drop-shadow(0 0 5px rgba(124, 133, 245, 0.4));
+  filter: drop-shadow(0 0 5px rgba(136, 209, 236, 0.25));
   border-radius: 8px;
 }

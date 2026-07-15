@@ -1,19 +1,11 @@
 {
-  "pulseaudio": {
-    "format": "{icon}",
-    "format-muted": "",
-    "format-icons": {
-      "headphone": "󰋋",
-      "headset": "󰋋",
-      "hands-free": "󰋋",
-      "default": [
-        "",
-        "",
-        ""
-      ]
-    },
-    "on-click": "pavucontrol",
-    "tooltip-format": "Output: {volume}%"
+  "custom/audio-status": {
+    "exec": "/home/tc/.config/waybar/scripts/audio-status",
+    "return-type": "json",
+    "interval": 1,
+    "format": "{}",
+    "on-click": "swaync-client -t -sw",
+    "tooltip": false
   },
   "pulseaudio#microphone": {
     "format": "{format_source}",

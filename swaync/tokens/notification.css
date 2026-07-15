@@ -2,23 +2,21 @@
 .notification {
   padding: 12px 14px;
   background: var(--bg-tile);
-  border: 1px solid var(--border-subtle);
+  border: none;
   border-radius: var(--radius-tile);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
-  transition: background var(--t-mid), border-color var(--t-mid), box-shadow var(--t-mid);
+  box-shadow: none;
+  transition: background var(--t-mid);
 }
 
 .notification:hover {
   background: var(--bg-tile-hover);
-  border-color: var(--border-glass);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.40);
 }
 
 /* Critical State */
 .notification.critical {
   background: var(--bg-critical);
-  border: 1px solid var(--border-critical);
-  box-shadow: 0 4px 20px var(--shadow-critical), inset 0 0 0 1px var(--border-critical);
+  border: none;
+  box-shadow: none;
 }
 
 .notification.critical:hover {
@@ -35,7 +33,7 @@
 
 .time {
   font-size: 10px;
-  color: var(--text-hover);
+  color: var(--text-dim);
 }
 
 .summary {
@@ -49,7 +47,7 @@
   margin: 0 0 2px 4px;
   font-size: 13px;
   line-height: 1.5;
-  color: var(--bg-widget);
+  color: var(--text-secondary);
 }
 
 /* --- ACTIONS & BUTTONS --- */
@@ -64,16 +62,16 @@
   padding: 5px 12px;
   font-size: 11px;
   font-weight: 600;
-  color: var(--accent);
+  color: #b8eaff;
   background: var(--accent-dim);
-  border: 10px solid var(--border-glass);
+  border: none;
   border-radius: var(--radius-btn);
-  transition: background var(--t-fast), border-color var(--t-fast);
+  transition: background var(--t-fast);
 }
 
 .notification-action:hover {
-  background: var(--accent-hover);
-  border-color: var(--accent);
+  background: var(--accent);
+  color: #003544;
 }
 
 .close-button {
@@ -89,8 +87,8 @@
 }
 
 .close-button:hover {
-  color: rgba(255, 110, 120, 0.95);
-  background: rgba(255, 80, 100, 0.18);
+  color: #ffdad6;
+  background: var(--bg-critical);
 }
 
 /* --- GROUPING & POPUPS --- */
@@ -102,17 +100,39 @@ row.notification-group {
 }
 
 .notification-popup {
-  margin: 8px;
+  margin: 12px;
   background: var(--bg-tile);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: none;
   border-radius: var(--radius-tile);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: none;
   animation: slideInRight 180ms ease both;
 }
 
 .notification-popup.critical {
-  border-color: var(--border-critical);
-  box-shadow: 0 8px 36px var(--shadow-critical), inset 0 0 0 1px var(--border-critical);
+  box-shadow: none;
+}
+
+.control-center .notification-row .notification-background {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.control-center .control-center-list .notification {
+  border: none;
+  box-shadow: none;
+}
+
+.notification-group .notification-group-close-button .close-button {
+  margin: 4px 6px;
+}
+
+.notification-group .notification-group-buttons,
+.notification-group .notification-group-headers {
+  margin: 0 6px;
+}
+
+.notification-group .notification-group-header {
+  min-width: 0;
 }
 
 /* --- ANIMATIONS --- */
@@ -144,7 +164,7 @@ row.notification-group {
 }
 
 separator {
-  background: var(--border-subtle);
+  background: transparent;
   min-height: 1px;
   margin: 4px 0 4px 0;
   border: none;
