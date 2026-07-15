@@ -3,11 +3,13 @@
 }
 
 window {
-  background-color: #1b2023;
+  background-color: transparent;
+  border-radius: 20px;
 }
 
 #window {
   background-color: #1b2023;
+  border-radius: 20px;
 }
 
 #outer-box {

@@ -5,7 +5,8 @@ return function()
 			gaps_in = 2,
 			gaps_out = 4,
 
-			border_size = 3,
+			-- Disable Hyprland's focus outline/border.
+			border_size = 0,
 
 			col = {
 				active_border = "rgba(b072d1ff)",
@@ -22,7 +23,7 @@ return function()
 		},
 
 		decoration = {
-			rounding = 8,
+			rounding = 16,
 			rounding_power = 2,
 
 			-- Change transparency of focused and unfocused windows
@@ -36,8 +37,9 @@ return function()
 				color = 0x9911111b,
 			},
 
+			-- Blur is visible through transparent inactive windows.
 			blur = {
-				enabled = false,
+				enabled = true,
 				size = 5,
 				passes = 2,
 				vibrancy = 0.12,
