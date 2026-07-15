@@ -1,4 +1,4 @@
-return function()
+return function(ctx)
 	-- Shared launch commands used by bindings and startup modules.
 	ctx.terminal = "kitty"
 	ctx.fileManager = "thunar"
