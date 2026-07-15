@@ -1,0 +1,12 @@
+[Added Associations]
+image/jpeg=swappy.desktop;
+image/svg+xml=com.google.Chrome.desktop;codium.desktop;
+application/octet-stream=vim.desktop;
+
+[Default Applications]
+text/html=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+application/octet-stream=vim.desktop
