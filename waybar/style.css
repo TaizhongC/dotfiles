@@ -20,16 +20,52 @@ window#waybar {
 
 tooltip {
   background: @surface_container;
-  border: 1px solid @outline_variant;
+  border: 1px solid @surface_container_highest;
   border-radius: 12px;
   color: @on_surface;
 }
 
 tooltip label {
-  padding: 8px;
+  padding: 10px 12px;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 11pt;
 }
 
 tooltip calendar {
   background: @surface_container;
   color: @on_surface;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 11pt;
+}
+
+tooltip calendar.header {
+  color: @primary;
+  font-weight: bold;
+}
+
+tooltip calendar.button {
+  color: @on_surface_variant;
+  border-radius: 8px;
+}
+
+tooltip calendar.button:hover {
+  background: @surface_container_high;
+  color: @primary;
+}
+
+tooltip calendar.highlight {
+  color: @secondary_fixed_dim;
+  font-weight: bold;
+}
+
+tooltip calendar:indeterminate {
+  color: @outline;
+}
+
+tooltip calendar:selected {
+  background: @primary;
+  border-radius: 8px;
+  color: @on_primary;
 }
