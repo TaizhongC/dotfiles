@@ -1,0 +1,10 @@
+return function()
+	hl.on("hyprland.start", function()
+		hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
+		hl.exec_cmd("pgrep -x swaync >/dev/null 2>&1 || swaync")
+		hl.exec_cmd("pgrep -x waybar >/dev/null 2>&1 || waybar")
+		hl.exec_cmd("pgrep -x awww-daemon >/dev/null 2>&1 || awww-daemon")
+		hl.exec_cmd("$HOME/.local/bin/wallpaperctl set")
+		hl.exec_cmd("pgrep -x fcitx5 >/dev/null 2>&1 || fcitx5 -d")
+	end)
+end
