@@ -15,6 +15,8 @@ return function()
 
 			-- Set to true to enable resizing windows by clicking and dragging on borders and gaps
 			resize_on_border = true,
+			-- Make the invisible edge-resize target easier to grab (in pixels).
+			extend_border_grab_area = 25,
 
 			-- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
 			allow_tearing = false,
