@@ -11,13 +11,13 @@
   "positionX": "right",
   "positionY": "top",
   "fit-to-screen": true,
-  "control-center-width": 360,
+  "control-center-width": 420,
   "control-center-height": 0,
   "control-center-margin-top": 8,
   "control-center-margin-bottom": 8,
   "control-center-margin-right": 8,
   "control-center-margin-left": 0,
-  "notification-window-width": 360,
+  "notification-window-width": 420,
   "notification-icon": false,
   "notification-icon-size": 32,
   "app-icon-size": 20,
@@ -45,8 +45,8 @@
           "label": "󰤨",
           "type": "toggle",
           "active": true,
-          "command": "sh -c 'if [ \"$SWAYNC_TOGGLE_STATE\" = true ]; then nmcli radio wifi on; else nmcli radio wifi off; fi'",
-          "update-command": "sh -c 'if [ \"$(nmcli radio wifi)\" = enabled ]; then echo true; else echo false; fi'"
+          "command": "/home/tc/.config/swaync/scripts/wifi-toggle",
+          "update-command": "/home/tc/.config/swaync/scripts/wifi-status"
         },
         {
           "label": "󰂯",

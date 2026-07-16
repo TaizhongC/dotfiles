@@ -1,6 +1,6 @@
 /* --- NOTIFICATION CONTAINER --- */
 .notification {
-  padding: 12px 14px;
+  padding: 8px 10px;
   background: var(--bg-tile);
   border: none;
   border-radius: var(--radius-tile);
@@ -38,14 +38,14 @@
 
 .summary {
   margin: 4px 0 2px 4px;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 500;
   color: var(--text-hover);
 }
 
 .body {
   margin: 0 0 2px 4px;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.5;
   color: var(--text-secondary);
 }
@@ -93,7 +93,7 @@
 
 /* --- GROUPING & POPUPS --- */
 row.notification-group {
-  margin: 4px 0;
+  margin: 2px 0;
   padding: 4px 1px;
   background: var(--bg-tile);
   border-radius: var(--radius-tile);
@@ -132,7 +132,15 @@ row.notification-group {
 }
 
 .notification-group .notification-group-header {
-  min-width: 0;
+  min-width: 48px;
+}
+
+/* Use the configured Kitty icon consistently in its group and notification rows. */
+.notification-group .notification-group-headers .notification-group-icon,
+.notification-row .notification-background .notification .notification-default-action .notification-content .image,
+.notification-row .notification-background .notification .notification-default-action .notification-content .app-icon {
+  -gtk-icon-source: -gtk-icontheme("kitty");
+  -gtk-icon-size: 24px;
 }
 
 /* --- ANIMATIONS --- */

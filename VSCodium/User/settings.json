@@ -46,9 +46,11 @@
   "window.customTitleBarVisibility": "never",
   "window.titleBarStyle": "native",
   "editor.fontFamily": "'JetBrainsMono Nerd Font mono', 'Droid Sans Mono', monospace",
-  "editor.padding.top": 16,
-  "editor.padding.bottom": 16,
+  "editor.padding.top": 20,
+  "editor.padding.bottom": 100,
   "editor.scrollBeyondLastLine": true,
+  "editor.cursorSurroundingLines": 8,
+  "editor.cursorSurroundingLinesStyle": "all",
   "editor.stickyScroll.enabled": false,
   "editor.unicodeHighlight.includeStrings": false
 }
