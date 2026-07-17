@@ -1,0 +1,5 @@
+[mgr]
+prepend_keymap = [
+  { on = "<Enter>", run = [ "enter", "quit" ], desc = "Enter folder and return terminal here" },
+  { on = "o", run = [ "enter", "quit" ], desc = "Enter folder and return terminal here" },
+]
