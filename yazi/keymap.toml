@@ -1,5 +1,5 @@
 [mgr]
 prepend_keymap = [
-  { on = "<Enter>", run = [ "enter", "quit" ], desc = "Enter folder and return terminal here" },
+  { on = "<Enter>", run = "plugin smart-enter", desc = "Enter folder or open file" },
   { on = "o", run = [ "enter", "quit" ], desc = "Enter folder and return terminal here" },
 ]
